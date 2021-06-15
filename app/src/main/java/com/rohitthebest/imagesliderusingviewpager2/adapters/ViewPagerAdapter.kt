@@ -8,8 +8,8 @@ import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.rohitthebest.imagesliderusingviewpager2.R
 import com.rohitthebest.imagesliderusingviewpager2.databinding.ImageItemBinding
 
-class ImageViewPagerAdapter(private val imageUrlList: List<String>) :
-    RecyclerView.Adapter<ImageViewPagerAdapter.ViewPagerViewHolder>() {
+class ViewPagerAdapter(private val imageUrlList: List<String>) :
+    RecyclerView.Adapter<ViewPagerAdapter.ViewPagerViewHolder>() {
 
     inner class ViewPagerViewHolder(val binding: ImageItemBinding) :
         RecyclerView.ViewHolder(binding.root) {

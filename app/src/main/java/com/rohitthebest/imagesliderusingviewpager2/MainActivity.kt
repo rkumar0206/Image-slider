@@ -3,14 +3,14 @@ package com.rohitthebest.imagesliderusingviewpager2
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager2.widget.ViewPager2
-import com.rohitthebest.imagesliderusingviewpager2.adapters.ImageViewPagerAdapter
+import com.rohitthebest.imagesliderusingviewpager2.adapters.ViewPagerAdapter
 import com.rohitthebest.imagesliderusingviewpager2.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
-    private lateinit var imageViewPagerAdapter: ImageViewPagerAdapter
+    private lateinit var viewPagerAdapter: ViewPagerAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,14 +27,14 @@ class MainActivity : AppCompatActivity() {
         )
 
         //initializing the adapter
-        imageViewPagerAdapter = ImageViewPagerAdapter(imageUrlList)
+        viewPagerAdapter = ViewPagerAdapter(imageUrlList)
 
         setUpViewPager()
     }
 
     private fun setUpViewPager() {
 
-        binding.viewPager.adapter = imageViewPagerAdapter
+        binding.viewPager.adapter = viewPagerAdapter
 
         //set the orientation of the viewpager using ViewPager2.orientation
         binding.viewPager.orientation = ViewPager2.ORIENTATION_HORIZONTAL
